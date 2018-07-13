@@ -103,9 +103,3 @@ body.active {
     height: 400px;
 }
 
-/* 用户模块  表格 */
-.table.table-bordered th,
-.table.table-bordered td {
-    text-align: center;
-    vertical-align: middle;
-}
