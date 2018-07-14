@@ -23,6 +23,7 @@ $('.icon-menu').on('click', function() {
     // console.log( "1" );
     $('.lt_aside').toggleClass('active');
     $('body').toggleClass('active');
+    $('.lt_header').toggleClass('active');
 })
 
 //点击icon-logout,退出登录
