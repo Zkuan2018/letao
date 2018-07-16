@@ -32,48 +32,7 @@
           <div class="mui-scroll">
             <!--这里放置真实显示的DOM内容-->
             <ul>
-              <li class="active">
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
-              <li>
-                <a href="javascript:;">运动馆</a>
-              </li>
+              <!-- 挖个坑 -->
 
             </ul>
 
@@ -85,54 +44,7 @@
           <div class="mui-scroll">
             <!--这里放置真实显示的DOM内容-->
             <ul>
-              <li>
-                <a href="javascript:;">
-                  <img src="./images/brand1.png" alt="">
-                  <p>nike</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <img src="./images/brand2.png" alt="">
-                  <p>adidas</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <img src="./images/brand3.png" alt="">
-                  <p>adidas1</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <img src="./images/brand4.png" alt="">
-                  <p>new blance</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <img src="./images/brand5.png" alt="">
-                  <p>kuangwei</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <img src="./images/brand6.png" alt="">
-                  <p>converse</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <img src="./images/brand7.png" alt="">
-                  <p>beau</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <img src="./images/brand8.png" alt="">
-                  <p>path finder</p>
-                </a>
-              </li>
+              <!-- 挖个坑 -->
             </ul>
 
           </div>
@@ -144,25 +56,25 @@
     <div class="lt_footer">
       <ul>
         <li>
-          <a href="category.html">
+          <a href="index.html">
             <span class="fa fa-home"></span>
             <p>首页</p>
           </a>
         </li>
         <li class="active">
-          <a href="index.html">
+          <a href="category.html">
             <span class="fa fa-bars"></span>
             <p>分类</p>
           </a>
         </li>
         <li>
-          <a href="index.html">
+          <a href="cart.html">
             <span class="fa fa-shopping-cart"></span>
             <p>购物车</p>
           </a>
         </li>
         <li>
-          <a href="index.html">
+          <a href="user.html">
             <span class="fa fa-user"></span>
             <p>会员中心</p>
           </a>
@@ -170,8 +82,34 @@
       </ul>
     </div>
   </div>
+
+  <script type="text/html" id="tpl">
+    {{ each rows v i}}
+    <li data-id="{{ v.id }}" class="{{ i== 0?'active':''}}">
+      <a href="javascript:;">{{ v.categoryName }}</a>
+    </li>
+    {{ /each }}
+  </script>
+
+  <script type="text/html" id="tpl2">
+    {{ if rows.length == 0}}
+    <p class="brand_empty">没有更多的数据了.......</p>
+    {{/if}}
+    {{ each rows v i}}
+    <li>
+      <a href="javascript:;">
+        <img src="{{ v.brandLogo?v.brandLogo:'images/none.png'}}" alt="">
+        <p>{{ v.brandName }}</p>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
   <script src="./lib/mui/js/mui.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
   <script src="./js/common.js"></script>
+  <script src="./js/category.js"></script>
+  
 </body>
 
 </html>

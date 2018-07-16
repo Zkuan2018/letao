@@ -86,3 +86,40 @@ h4 {
 .lt_footer li.active p {
   color: darkorange;
 }
+.lt_search {
+  padding: 10px;
+  position: relative;
+}
+.lt_search input {
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #007aff;
+  font-size: 12px;
+  margin: 0;
+}
+.lt_search button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 0 5px 5px 0;
+}
+.product {
+  padding: 10px;
+}
+.product .product-item {
+  width: 48%;
+  border: 1px solid #ccc;
+  float: left;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.product .product-item:nth-child(even) {
+  margin-left: 4%;
+}
+.product .product-item .price {
+  color: red;
+}
+.product .mui-ellipsis-2 {
+  height: 39px;
+}
